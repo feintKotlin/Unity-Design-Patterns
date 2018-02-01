@@ -16,7 +16,7 @@ namespace Feint.Command
             this.dir = dir;
         }
 
-        public static CubeMsg msg(Transform transform, MoveDir dir)
+        public static CubeMsg Msg(Transform transform, MoveDir dir)
         {
             return new CubeMsg(transform,dir);
         }

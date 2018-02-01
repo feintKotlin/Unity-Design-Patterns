@@ -24,28 +24,28 @@ namespace Feint.Command
         {
             if (Input.GetKeyDown(_upKey))
             {
-                _gameManager.SendMessage("Move",CubeMsg.msg(
+                _gameManager.SendMessage("Move",CubeMsg.Msg(
                     transform,MoveDir.Up));
               
             }
 
             if (Input.GetKeyDown(_downKey))
             {
-                _gameManager.SendMessage("Move",CubeMsg.msg(
+                _gameManager.SendMessage("Move",CubeMsg.Msg(
                     transform,MoveDir.Down));
  
             }
 
             if (Input.GetKeyDown(_leftKey))
             {
-                _gameManager.SendMessage("Move",CubeMsg.msg(
+                _gameManager.SendMessage("Move",CubeMsg.Msg(
                     transform,MoveDir.Left));
 
             }
 
             if (Input.GetKeyDown(_rightKey))
             {
-                _gameManager.SendMessage("Move",CubeMsg.msg(
+                _gameManager.SendMessage("Move",CubeMsg.Msg(
                     transform,MoveDir.Right));
 
             }

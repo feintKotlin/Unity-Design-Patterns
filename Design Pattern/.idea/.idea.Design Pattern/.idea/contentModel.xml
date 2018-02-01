@@ -15,9 +15,10 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="Command" t="Include">
+            <e p="BoxCommand.cs" t="Include" />
             <e p="BoxMove.cs" t="Include" />
-            <e p="CommadEntity.cs" t="Include" />
             <e p="Command.cs" t="Include" />
+            <e p="CommandHandler.cs" t="Include" />
             <e p="CubeMsg.cs" t="Include" />
             <e p="GameManager.cs" t="Include" />
             <e p="MoveCommand.cs" t="Include" />
@@ -25,7 +26,6 @@
             <e p="PlaceHolder.cs" t="Include" />
             <e p="PlayerMove.cs" t="Include" />
           </e>
-          <e p="Test.cs" t="Include" />
         </e>
         <e p="Shaders" t="Include">
           <e p="Wall.shader" t="Include" />

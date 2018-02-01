@@ -3,42 +3,34 @@ using UnityEngine;
 
 namespace Feint.Command
 {
-    public class MoveCommand:CommandEntity
+    public class MoveCommand:Command
     {
 
         private Transform _transform;
+        private MoveDir _dir;
 
-        public Transform Action
-        {
-            get { return _transform; }
-        }
-
-        public MoveCommand(Transform transform)
+        public MoveCommand(Transform transform,MoveDir dir)
         {
             _transform = transform;
+            _dir = dir;
         }
         
-        public override Command Execute()
+        public Command Execute()
         {
-            _transform.position+=new Vector3(2,0,0)*Time.deltaTime;
-            MoveCommand mc = new MoveCommand(_transform);
-            _commandStack.Push(mc);
-            return mc;
+            _transform.position += MoveUtils.Move(_dir);
+            return this;
         }
 
-        public override Command Undo()
+        public Command Undo()
         {
-            if (_commandStack.Count == 0)
-                return null;
-            Transform transform = ((MoveCommand) _commandStack.Pop()).Action;
-            transform.position-=new Vector3(2,0,0)*Time.deltaTime;
-            MoveCommand mc=new MoveCommand(transform);
-            return mc;
+            _transform.position -= MoveUtils.Move(_dir);
+            return this;
         }
 
-        public override Command Redo()
+        public  Command Redo()
         {
-            return null;
+            _transform.position += MoveUtils.Move(_dir);
+            return this;
         }
     }
 }

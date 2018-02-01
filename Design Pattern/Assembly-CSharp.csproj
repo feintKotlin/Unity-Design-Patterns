@@ -52,16 +52,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Command\BoxCommand.cs" />
     <Compile Include="Assets\Scripts\Command\BoxMove.cs" />
-    <Compile Include="Assets\Scripts\Command\CommadEntity.cs" />
     <Compile Include="Assets\Scripts\Command\Command.cs" />
+    <Compile Include="Assets\Scripts\Command\CommandHandler.cs" />
     <Compile Include="Assets\Scripts\Command\CubeMsg.cs" />
     <Compile Include="Assets\Scripts\Command\GameManager.cs" />
     <Compile Include="Assets\Scripts\Command\MoveCommand.cs" />
     <Compile Include="Assets\Scripts\Command\MoveUtils.cs" />
     <Compile Include="Assets\Scripts\Command\PlaceHolder.cs" />
     <Compile Include="Assets\Scripts\Command\PlayerMove.cs" />
-    <Compile Include="Assets\Scripts\Test.cs" />
     <None Include="Assets\Shaders\Wall.shader" />
     <None Include="Assets\Shaders\Wood.shader" />
     <Reference Include="UnityEngine.UIAutomation">
